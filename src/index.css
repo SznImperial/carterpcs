@@ -68,6 +68,10 @@
     @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-400 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6;
   }
 
+  .bg-white\/4 {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
   .stat-card {
     background: rgba(14, 20, 36, 0.7);
     backdrop-filter: blur(12px);
