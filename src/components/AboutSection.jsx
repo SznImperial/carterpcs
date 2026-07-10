@@ -35,7 +35,7 @@ const AboutSection = () => {
             className={`relative transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}
             style={{ transitionDelay: '150ms' }}
           >
-            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-blue-600/20 via-violet-600/10 to-transparent" />
+            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-primary/20 via-accent/10 to-transparent" />
             <div className="relative h-80 rounded-xl overflow-hidden border border-white/5 bg-surface">
               <img
                 src="/carter.jpg"
@@ -48,7 +48,7 @@ const AboutSection = () => {
                   <p className="text-xs text-slate-400 uppercase tracking-widest">Content Creator</p>
                   <p className="font-display font-black text-white">Carter Smith</p>
                 </div>
-                <span className="px-2.5 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full text-xs font-bold text-blue-400">@carterpcs</span>
+                <span className="px-2.5 py-1 bg-primary/20 border border-primary/30 rounded-full text-xs font-bold text-primary">@carterpcs</span>
               </div>
             </div>
 
@@ -82,13 +82,13 @@ const AboutSection = () => {
             </div>
 
             {/* Quote */}
-            <div className="pl-5 py-5 border-l-2 border-blue-500/40">
+            <div className="pl-5 py-5 border-l-2 border-primary/40">
               <p className="text-[17px] italic text-slate-200 leading-relaxed mb-3">
                 "I am not an engineer... But what I do have is an unwavering passion for the technology that's pushing our world forward."
               </p>
               <div className="flex items-center gap-2">
-                <div className="w-6 h-0.5 bg-blue-500/60" />
-                <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Carter Smith</span>
+                <div className="w-6 h-0.5 bg-primary/60" />
+                <span className="text-xs font-bold text-primary uppercase tracking-widest">Carter Smith</span>
               </div>
             </div>
           </div>

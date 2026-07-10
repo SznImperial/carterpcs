@@ -90,7 +90,7 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
           {/* Avatar */}
           <div className="relative mb-4">
             <div className="absolute inset-0 rounded-full animate-spin-slow" style={{
-              background: 'conic-gradient(from 0deg, #3b82f6, #8b5cf6, #f472b6, #3b82f6)',
+              background: 'conic-gradient(from 0deg, #9fb8cd, #5a82a6, #c5d5e2, #9fb8cd)',
               padding: '2px',
               borderRadius: '50%',
               animation: 'spin 4s linear infinite',
@@ -110,7 +110,7 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
 
           {/* Typed text */}
           <div className="h-6 flex items-center">
-            <span className="text-sm font-semibold text-blue-400">
+            <span className="text-sm font-semibold text-primary">
               {display}
               <span className={`ml-0.5 ${cursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
             </span>
@@ -141,7 +141,7 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
                   onClick={onClose}
                   className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 ${
                     activeSection === link.href.replace('#', '')
-                      ? 'bg-blue-500/15 text-blue-400 border border-blue-500/20'
+                      ? 'bg-primary/10 text-primary border border-primary/20'
                       : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >

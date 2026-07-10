@@ -21,8 +21,8 @@ const HeroSection = () => {
   return (
     <section id="hero" ref={ref} className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background orbs */}
-      <div className="orb w-[500px] h-[500px] bg-blue-600 top-[-150px] right-[-100px] opacity-20" />
-      <div className="orb w-[350px] h-[350px] bg-violet-600 bottom-[-100px] left-[-50px] opacity-15" style={{ animationDelay: '-4s' }} />
+      <div className="orb w-[500px] h-[500px] bg-primary top-[-150px] right-[-100px] opacity-20" />
+      <div className="orb w-[350px] h-[350px] bg-accent bottom-[-100px] left-[-50px] opacity-15" style={{ animationDelay: '-4s' }} />
 
       {/* Grid */}
       <div className="absolute inset-0 hero-grid opacity-40 pointer-events-none" />

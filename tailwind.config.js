@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#080c14',
-        surface: '#0e1424',
-        'surface-2': '#111827',
-        primary: '#3b82f6',
-        accent: '#8b5cf6',
+        background: '#0b1118', // Deep metallic slate background
+        surface: '#111b27',    // Metallic steel surface
+        'surface-2': '#192635', // Starlight/metallic slate
+        primary: '#9fb8cd',    // Sierra Blue primary
+        accent: '#5a82a6',     // Steel/deep sierra blue accent
         pink: '#f472b6',
-        text: '#f8fafc',
+        text: '#f1f5f9',
         muted: '#94a3b8',
       },
       fontFamily: {

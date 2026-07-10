@@ -51,7 +51,7 @@ function App() {
         style={{ background: 'rgba(8,12,20,0.95)', backdropFilter: 'blur(20px)' }}
       >
         <a href="#hero" className="font-display text-lg font-black">
-          CARTER<span className="text-blue-400">PCs</span>
+          CARTER<span className="text-primary">PCs</span>
         </a>
         <button
           onClick={() => setMobileOpen(v => !v)}

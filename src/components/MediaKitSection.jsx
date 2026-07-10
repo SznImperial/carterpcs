@@ -40,7 +40,7 @@ const MediaKitSection = () => {
 
   return (
     <section id="mediakit" ref={ref} className="py-20 relative overflow-hidden">
-      <div className="orb w-[400px] h-[400px] bg-blue-700 bottom-[-150px] left-[-100px] opacity-10" />
+      <div className="orb w-[400px] h-[400px] bg-primary bottom-[-150px] left-[-100px] opacity-10" />
 
       <div className="relative z-10 max-w-4xl px-8">
         {/* Header */}
@@ -186,7 +186,7 @@ const MediaKitSection = () => {
                 Managed by
               </p>
               <p className="text-sm font-bold text-slate-300 text-center">Rakugo Media</p>
-              <p className="text-xs text-blue-400 text-center mt-1">carterpcs@rakugomedia.com</p>
+              <p className="text-xs text-primary text-center mt-1">carterpcs@rakugomedia.com</p>
             </div>
           </div>
         </div>

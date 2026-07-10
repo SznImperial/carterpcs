@@ -29,7 +29,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" ref={ref} className="py-20 relative overflow-hidden">
-      <div className="orb w-[400px] h-[400px] bg-blue-600 top-[-100px] right-[-150px] opacity-10" />
+      <div className="orb w-[400px] h-[400px] bg-primary top-[-100px] right-[-150px] opacity-10" />
 
       <div className="relative z-10 max-w-4xl px-8">
         {/* Header */}
@@ -52,7 +52,7 @@ const ContactSection = () => {
             <div className="glass-card p-5">
               <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Management</p>
               <h3 className="font-display text-xl font-bold text-white mb-1">Rakugo Media</h3>
-              <a href="mailto:carterpcs@rakugomedia.com" className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
+              <a href="mailto:carterpcs@rakugomedia.com" className="text-sm text-primary hover:text-primary/80 transition-colors">
                 carterpcs@rakugomedia.com
               </a>
             </div>
@@ -90,7 +90,7 @@ const ContactSection = () => {
             <div className="glass-card p-6">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center min-h-[380px] gap-5 text-center">
-                  <div className="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-3xl">🎉</div>
+                  <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-3xl">🎉</div>
                   <div>
                     <h3 className="font-display text-xl font-bold text-white mb-1">Message Sent!</h3>
                     <p className="text-slate-400 text-sm">Rakugo Media will respond within 48 hours.</p>
