@@ -32,7 +32,7 @@ const ContactSection = () => {
       <div className="orb w-[400px] h-[400px] bg-primary top-[-100px] right-[-150px] opacity-10" />
 
       <div className="relative z-10 max-w-4xl px-8">
-        {/* Header */}
+        
         <div className={`mb-10 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <span className="section-label">Get In Touch ✉</span>
           <h2 className="font-display text-4xl md:text-5xl font-black mt-2">
@@ -44,7 +44,7 @@ const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left — info + socials */}
+          
           <div
             className={`flex flex-col gap-5 transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}
             style={{ transitionDelay: '150ms' }}
@@ -82,7 +82,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Right — form */}
+          
           <div
             className={`transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}
             style={{ transitionDelay: '250ms' }}

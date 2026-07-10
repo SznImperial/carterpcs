@@ -64,7 +64,7 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
 
   return (
     <>
-      {/* Overlay for mobile */}
+      
       {mobileOpen && (
         <div
           className="fixed inset-0 bg-black/60 z-30 lg:hidden"
@@ -85,9 +85,9 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
           borderRight: '1px solid rgba(255,255,255,0.05)',
         }}
       >
-        {/* Profile Area */}
+        
         <div className="flex flex-col items-center pt-10 pb-6 px-6 border-b border-white/5">
-          {/* Avatar */}
+          
           <div className="relative mb-4">
             <div className="absolute inset-0 rounded-full animate-spin-slow" style={{
               background: 'conic-gradient(from 0deg, #9fb8cd, #5a82a6, #c5d5e2, #9fb8cd)',
@@ -104,11 +104,11 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
             </div>
           </div>
 
-          {/* Name */}
+          
           <h1 className="font-display text-xl font-black text-white mb-0.5">Carter Smith</h1>
           <p className="text-xs text-slate-500 mb-3">@carterpcs</p>
 
-          {/* Typed text */}
+          
           <div className="h-6 flex items-center">
             <span className="text-sm font-semibold text-primary">
               {display}
@@ -116,7 +116,6 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
             </span>
           </div>
 
-          {/* Quick stats */}
           <div className="grid grid-cols-3 gap-2 w-full mt-5">
             {[
               { v: '6.7M', l: 'TikTok' },
@@ -131,7 +130,7 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
           </div>
         </div>
 
-        {/* Nav */}
+      
         <nav className="flex-1 py-6 px-4 overflow-y-auto">
           <ul className="space-y-1">
             {navLinks.map(link => (
@@ -153,7 +152,7 @@ const Sidebar = ({ activeSection, mobileOpen, onClose }) => {
           </ul>
         </nav>
 
-        {/* Socials */}
+        
         <div className="px-6 py-6 border-t border-white/5">
           <p className="text-[10px] uppercase tracking-widest text-slate-600 mb-3 font-semibold">Follow</p>
           <div className="flex gap-3">

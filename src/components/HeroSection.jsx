@@ -20,11 +20,11 @@ const HeroSection = () => {
 
   return (
     <section id="hero" ref={ref} className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-      {/* Background orbs */}
+      
       <div className="orb w-[500px] h-[500px] bg-primary top-[-150px] right-[-100px] opacity-20" />
       <div className="orb w-[350px] h-[350px] bg-accent bottom-[-100px] left-[-50px] opacity-15" style={{ animationDelay: '-4s' }} />
 
-      {/* Grid */}
+    
       <div className="absolute inset-0 hero-grid opacity-40 pointer-events-none" />
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
 
@@ -64,7 +64,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll cue */}
+      
       <div className="absolute bottom-8 right-8 z-20 flex flex-col items-center gap-1 text-slate-700 animate-bounce">
         <ChevronDown size={20} />
       </div>

@@ -30,7 +30,7 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left — photo */}
+          
           <div
             className={`relative transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}
             style={{ transitionDelay: '150ms' }}
@@ -52,7 +52,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Milestone pills */}
+            
             <div className="grid grid-cols-3 gap-3 mt-4">
               {[
                 { v: '18', l: 'Moved to LA' },
@@ -67,7 +67,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right — text */}
+        
           <div
             className={`flex flex-col justify-center transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}
             style={{ transitionDelay: '250ms' }}
@@ -81,7 +81,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            {/* Quote */}
+            
             <div className="pl-5 py-5 border-l-2 border-primary/40">
               <p className="text-[17px] italic text-slate-200 leading-relaxed mb-3">
                 "I am not an engineer... But what I do have is an unwavering passion for the technology that's pushing our world forward."

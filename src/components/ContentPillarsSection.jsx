@@ -63,11 +63,11 @@ const ContentPillarsSection = () => {
 
   return (
     <section id="pillars" ref={ref} className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #080c14 0%, #0d1120 50%, #080c14 100%)' }}>
-      {/* Grid overlay */}
+      
       <div className="absolute inset-0 hero-grid opacity-30 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Header */}
+        
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <span className="section-label">The Content</span>
           <h2 className="font-display text-5xl md:text-6xl font-black leading-tight mb-5">
@@ -78,7 +78,7 @@ const ContentPillarsSection = () => {
           </p>
         </div>
 
-        {/* Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
@@ -88,7 +88,7 @@ const ContentPillarsSection = () => {
                 className={`pillar-card p-8 group transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                {/* Top row */}
+              
                 <div className="flex items-start justify-between mb-6">
                   <div
                     className="p-3 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
@@ -109,13 +109,13 @@ const ContentPillarsSection = () => {
                   </div>
                 </div>
 
-                {/* Content */}
+                
                 <div className="mb-6">
                   <h3 className="font-display text-2xl font-bold text-white mb-3 leading-tight">{pillar.title}</h3>
                   <p className="text-slate-400 leading-relaxed text-[15px]">{pillar.description}</p>
                 </div>
 
-                {/* Visual placeholder — styled as a "video thumbnail" */}
+                
                 <div
                   className="w-full h-44 rounded-xl flex items-center justify-center relative overflow-hidden"
                   style={{ background: `linear-gradient(135deg, #0d1120 60%, ${pillar.color}18)`, border: `1px solid ${pillar.color}20` }}

@@ -43,7 +43,7 @@ const MediaKitSection = () => {
       <div className="orb w-[400px] h-[400px] bg-primary bottom-[-150px] left-[-100px] opacity-10" />
 
       <div className="relative z-10 max-w-4xl px-8">
-        {/* Header */}
+        
         <div className={`mb-10 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <span className="section-label">For Brands & Sponsors</span>
           <h2 className="font-display text-4xl md:text-5xl font-black mt-2">
@@ -54,7 +54,7 @@ const MediaKitSection = () => {
           </p>
         </div>
 
-        {/* Engagement Cards */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           {platforms.map(({ Icon, label, rate, followers, color }, i) => (
             <div
@@ -74,7 +74,7 @@ const MediaKitSection = () => {
                 </div>
                 <span className="font-display font-black text-3xl" style={{ color }}>{rate}</span>
               </div>
-              {/* Animated bar */}
+            
               <div className="h-2 bg-white/5 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all ease-out"
@@ -92,16 +92,16 @@ const MediaKitSection = () => {
           ))}
         </div>
 
-        {/* Demo + Partners */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          {/* Demographics */}
+      
           <div
             className={`glass-card p-6 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
             style={{ transitionDelay: '300ms' }}
           >
             <h3 className="font-display font-bold text-white mb-5 text-lg">Demographics</h3>
 
-            {/* Donut rings row */}
+            
             <div className="flex gap-4 justify-around mb-6">
               {demographics.map(({ value, label, sub, color }, i) => (
                 <div key={label} className="flex flex-col items-center gap-2">
@@ -131,7 +131,7 @@ const MediaKitSection = () => {
               ))}
             </div>
 
-            {/* Age bars */}
+            
             <div className="space-y-2.5">
               {[
                 { label: '13–17', pct: 12, color: '#8b5cf6' },
@@ -158,7 +158,7 @@ const MediaKitSection = () => {
             </div>
           </div>
 
-          {/* Partners */}
+          
           <div
             className={`glass-card p-6 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
             style={{ transitionDelay: '400ms' }}

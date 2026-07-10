@@ -13,7 +13,7 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
-  // Track active section on scroll
+
   useEffect(() => {
     const observers = SECTIONS.map(id => {
       const el = document.getElementById(id);
@@ -28,7 +28,7 @@ function App() {
     return () => observers.forEach(o => o.disconnect());
   }, []);
 
-  // Close mobile menu on resize
+  
   useEffect(() => {
     const onResize = () => { if (window.innerWidth >= 1024) setMobileOpen(false); };
     window.addEventListener('resize', onResize);
@@ -38,14 +38,14 @@ function App() {
   return (
     <div className="flex min-h-screen bg-background text-text font-sans">
 
-      {/* ── Sidebar ──────────────────────────────────────────────── */}
+  
       <Sidebar
         activeSection={activeSection}
         mobileOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
       />
 
-      {/* ── Mobile Top Bar ───────────────────────────────────────── */}
+     
       <div
         className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3 border-b border-white/5"
         style={{ background: 'rgba(8,12,20,0.95)', backdropFilter: 'blur(20px)' }}
@@ -62,18 +62,18 @@ function App() {
         </button>
       </div>
 
-      {/* ── Main Content ─────────────────────────────────────────── */}
+  
       <main
         className="flex-1 lg:ml-72 min-h-screen"
         style={{
           background: 'linear-gradient(135deg, #080c14 0%, #0a0f1c 50%, #080c14 100%)',
         }}
       >
-        {/* Top padding on mobile for the fixed bar */}
+        
         <div className="pt-14 lg:pt-0">
           <HeroSection />
 
-          {/* Divider */}
+          
           <div className="h-px bg-gradient-to-r from-transparent via-white/5 to-transparent mx-8" />
 
           <LinksSection />
@@ -90,7 +90,7 @@ function App() {
 
           <ContactSection />
 
-          {/* Footer */}
+          
           <footer className="py-10 px-8 border-t border-white/5 text-center">
             <p className="text-xs text-slate-700">
               &copy; {new Date().getFullYear()} Carter Smith · Managed by{' '}

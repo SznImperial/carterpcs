@@ -121,7 +121,7 @@ const LinksSection = () => {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              {/* Emoji icon */}
+              
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
                 style={{ background: `${link.color}15` }}
@@ -129,13 +129,13 @@ const LinksSection = () => {
                 {link.emoji}
               </div>
 
-              {/* Text */}
+            
               <div className="flex-1 min-w-0">
                 <p className="font-semibold text-white text-sm leading-snug mb-0.5">{link.label}</p>
                 <p className="text-xs text-slate-500 truncate">{link.sub}</p>
               </div>
 
-              {/* Arrow */}
+              
               <div
                 className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-white/5 text-slate-600 group-hover:text-white group-hover:bg-white/10 transition-all duration-200"
               >
