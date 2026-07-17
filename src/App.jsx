@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import HeroSection from './components/HeroSection';
 import LinksSection from './components/LinksSection';
@@ -13,88 +13,85 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
-
   useEffect(() => {
-    const observers = SECTIONS.map(id => {
+    const observers = SECTIONS.map((id) => {
       const el = document.getElementById(id);
       if (!el) return null;
       const observer = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
-        { threshold: 0.35 }
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { threshold: 0.28, rootMargin: '-10% 0px -35% 0px' }
       );
       observer.observe(el);
       return observer;
     }).filter(Boolean);
-    return () => observers.forEach(o => o.disconnect());
+
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
-  
   useEffect(() => {
-    const onResize = () => { if (window.innerWidth >= 1024) setMobileOpen(false); };
+    const onResize = () => {
+      if (window.innerWidth >= 1024) setMobileOpen(false);
+    };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
   return (
     <div className="flex min-h-screen bg-background text-text font-sans">
-
-  
       <Sidebar
         activeSection={activeSection}
         mobileOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
       />
 
-     
-      <div
-        className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3 border-b border-white/5"
-        style={{ background: 'rgba(8,12,20,0.95)', backdropFilter: 'blur(20px)' }}
-      >
-        <a href="#hero" className="font-display text-lg font-black">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-3 mobile-bar">
+        <a href="#hero" className="font-display text-lg font-bold tracking-tight">
           CARTER<span className="text-primary">PCs</span>
         </a>
         <button
-          onClick={() => setMobileOpen(v => !v)}
-          className="p-2 rounded-lg bg-white/5 text-slate-400 hover:text-white transition-colors"
-          aria-label="Toggle menu"
+          type="button"
+          onClick={() => setMobileOpen((v) => !v)}
+          className="p-2 rounded-lg bg-white/[0.05] text-slate-400 hover:text-white hover:bg-white/[0.08] transition-colors duration-200"
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
-  
-      <main
-        className="flex-1 lg:ml-72 min-h-screen"
-        style={{
-          background: 'linear-gradient(135deg, #080c14 0%, #0a0f1c 50%, #080c14 100%)',
-        }}
-      >
-        
+      <main className="flex-1 lg:ml-72 min-h-screen main-canvas">
         <div className="pt-14 lg:pt-0">
           <HeroSection />
 
-          
-          <div className="h-px bg-gradient-to-r from-transparent via-white/5 to-transparent mx-8" />
-
+          <div className="section-divider" />
           <LinksSection />
 
-          <div className="h-px bg-gradient-to-r from-transparent via-white/5 to-transparent mx-8" />
-
+          <div className="section-divider" />
           <AboutSection />
 
-          <div className="h-px bg-gradient-to-r from-transparent via-white/5 to-transparent mx-8" />
-
+          <div className="section-divider" />
           <MediaKitSection />
 
-          <div className="h-px bg-gradient-to-r from-transparent via-white/5 to-transparent mx-8" />
-
+          <div className="section-divider" />
           <ContactSection />
 
-          
-          <footer className="py-10 px-8 border-t border-white/5 text-center">
-            <p className="text-xs text-slate-700">
+          <footer className="py-10 px-8 border-t border-white/[0.04] text-center">
+            <p className="text-xs text-slate-600">
               &copy; {new Date().getFullYear()} Carter Smith · Managed by{' '}
-              <a href="mailto:carterpcs@rakugomedia.com" className="text-slate-600 hover:text-slate-400 transition-colors">
+              <a
+                href="mailto:carterpcs@rakugomedia.com"
+                className="text-slate-500 hover:text-slate-300 transition-colors duration-200"
+              >
                 Rakugo Media
               </a>
             </p>
